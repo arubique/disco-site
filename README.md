@@ -47,7 +47,7 @@ To edit the websites contents edit the `index.html` file. It contains different 
 - Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://horwitz.ai](https://horwitz.ai)
 
 ## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+Created from [this template](https://github.com/eliahuhorwitz/Academic-project-page-template).
 
 ## Website License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

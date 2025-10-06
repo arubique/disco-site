@@ -101,24 +101,24 @@
                   <!-- Github link -->
                   <span class="link-block">
                     <!-- <a href="https://github.com/AlexanderRubinstein/OCCAM" target="_blank" -->
-                    <a href="https://arubique.github.io/disco-site/" target="_blank"
+                    <a href="https://github.com/arubique/disco-public" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code is coming soon</span>
+                    <span>Code</span>
                   </a>
                 </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <!-- <a href="https://arxiv.org/abs/2504.07092" target="_blank" -->
-                  <a href="https://arubique.github.io/disco-site/" target="_blank"
+                  <a href="https://arxiv.org/abs/XXX" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv is coming soon</span>
+                  <span>arXiv</span>
                 </a>
               </span>
             </div>
@@ -169,7 +169,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Evaluating modern machine learning models has become prohibitively expensive.
+            <!-- Evaluating modern machine learning models has become prohibitively expensive.
             Benchmarks such as LMMs-Eval and HELM demand thousands of GPU hours per model,
             limiting thorough evaluation to resource-rich labs and discouraging experimentation.
             Prior approaches reduce cost by selecting fixed subsets of data, yet often rely on brittle heuristics
@@ -179,6 +179,10 @@
             the concatenation of its predictions on this reduced set. Its full performance is estimated via regression.
             DISCO reduces evaluation cost by up to 99.3% on MMLU and 99.8% ImageNet with only 1%p error in accuracy estimation,
             demonstrating a superior efficiency-precision trade-off to existing efficient evaluation methods.
+             -->
+             Evaluating modern machine learning models has become prohibitively expensive. Benchmarks such as LMMs-Eval and HELM demand thousands of GPU hours per model. Costly evaluation reduces inclusivity, slows the cycle of innovation, and worsens environmental impact.
+             The typical approach follows two steps. First, select an anchor subset of data. Second, train a mapping from the accuracy on this subset to the final test result. The drawback is that anchor selection depends on clustering, which can be complex and sensitive to design choices. We argue that promoting diversity among samples is not essential; what matters is to select samples that <i>maximise diversity in model responses</i>.
+             Our method, <b>Diversifying Sample Condensation (DISCO)</b>, selects the top-k samples with the greatest model disagreements. This uses greedy, sample-wise statistics rather than global clustering. The approach is conceptually simpler. From a theoretical view, inter-model disagreement provides an information-theoretically optimal rule for such greedy selection. <b>DISCO</b> shows empirical gains over prior methods, achieving state-of-the-art results in performance prediction across MMLU, Hellaswag, Winogrande, and ARC.
           </p>
         </div>
       </div>
@@ -214,16 +218,30 @@
       </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/results.png" alt="results"/>
+      <img src="static/images/results.png" width="85%" alt="results" style="display: block; margin-left: auto; margin-right: auto;"/>
       <h2 class="subtitle has-text-centered">
         <b>DISCO compression of MMLU, HellaSwag, Winogrande and Arc datasets.</b> We compare our DISCO against baselines.
         For each dataset, we reduce the test set to 100 data points, achieving inference cost reduction of up to 99.3%
         and 99.0% on MMLU and HellaSwag, respectively. Main metrics are mean absolute error (MAE),
         measured in %p difference in accuracy, and the Spearman rank correlation (Rank) between the true model
         ranking and the estimated model ranking. Main observations: (1) Model signature is an effective strategy for
-        performance estimation. (2) Using PDS on top, DISCO achieves the state of the art in test-set compression.
+        performance estimation. (2) Condensing dataset into the top-k diversifying samples (e.g. according to Predictive Diversity Score (PDS)) allows DISCO to achieve the state of the art in test-set compression.
       </h2>
     </div>
+    <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/vision-results.png" alt="results" width="40%" style="display: block; margin-left: auto; margin-right: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>DISCO compression of ImageNet validation dataset.</b> We evaluate the generalisation of our DISCO to the computer vision domain. The main metrics are mean absolute error (MAE), measured in %p difference in accuracy, and the Spearman rank correlation (Rank) between the true model ranking and the estimated model ranking. Main observations: (1) Same as for language experiments, model signature is an effective strategy for performance estimation. (2) Using PDS on top improves performance even more.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/num-anchors.png" alt="results" style="display: block; margin-left: auto; margin-right: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>MMLU performance estimation vs. compression rates.</b> Mean absolute error (MAE), measured in %p difference in accuracy, and the Spearman rank correlation between the true model ranking and the estimated model ranking are shown. At 100 samples, the results are identical to Table \ref{tab:language-main}. Main observations: DISCO hits a better efficiency-precision trade-off across all range of compression rates. For extreme compression rate, kNN is a better choice than random forest (RF).
+        </h2>
+      </div>
   </div>
 </div>
 </div>
@@ -231,6 +249,10 @@
 <!-- End image carousel -->
 
 
+<!-- \textbf{MMLU performance estimation vs. compression rates}. Mean absolute error (MAE), measured in \%p difference in accuracy, and the Spearman rank correlation between the true model ranking and the estimated model ranking are shown. At 100 samples, the results are identical to Table \ref{tab:language-main}. \textbf{Main observations}: \method hits a better efficiency-precision trade-off across all range of compression rates. For extreme compression rate, kNN is a better choice than random forest (RF). -->
+
+
+<!-- \textbf{\methodbf compression of ImageNet validation dataset.} We evaluate the generalisation of our \method to the computer vision domain. The main metrics are mean absolute error (MAE), measured in \%p difference in accuracy, and the Spearman rank correlation (Rank) between the true model ranking and the estimated model ranking. \textbf{Main observations}: (1) Same as for language experiments, model signature is an effective strategy for performance estimation. (2) Using PDS on top improves performance even more. -->
 
 
 <!-- Youtube video -->

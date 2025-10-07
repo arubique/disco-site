@@ -125,11 +125,34 @@ body {
   margin: 0;
 }
 
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.result-item {
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.result-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.result-item .subtitle {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
 .slider-pagination .slider-page {
   background: #000000;
 }
 
-.eql-cntrb { 
+.eql-cntrb {
   font-size: smaller;
 }
 

@@ -204,13 +204,12 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Image section -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <!-- <div id="results-carousel" class="carousel results-carousel" data-pause-on-hover="true" data-autoplay="false"> -->
-        <div id="results-carousel" class="carousel results-carousel" data-pause-on-hover="true">
-        <div class="item">
+      <div class="results-container">
+        <div class="result-item">
         <!-- Your image here -->
         <img src="static/images/problem-2.png" alt="problem statement: efficient evaluation"/>
         <h2 class="subtitle has-text-centered">
@@ -219,7 +218,7 @@
             as close as possible.
         </h2>
       </div>
-      <div class="item">
+      <div class="result-item">
         <!-- Your image here -->
         <img src="static/images/method_details-400.png" alt="method details"/>
         <h2 class="subtitle has-text-centered">
@@ -228,7 +227,7 @@
             selected samples.
         </h2>
       </div>
-     <div class="item">
+     <div class="result-item">
       <!-- Your image here -->
       <img src="static/images/results.png" width="85%" alt="results" style="display: block; margin-left: auto; margin-right: auto;"/>
       <h2 class="subtitle has-text-centered">
@@ -240,25 +239,25 @@
         performance estimation. (2) Condensing dataset into the top-k diversifying samples (e.g. according to Predictive Diversity Score (PDS)) allows DISCO to achieve the state of the art in test-set compression.
       </h2>
     </div>
-    <div class="item">
+    <div class="result-item">
         <!-- Your image here -->
         <img src="static/images/vision-results.png" alt="results" width="40%" style="display: block; margin-left: auto; margin-right: auto;"/>
         <h2 class="subtitle has-text-centered">
           <b>DISCO compression of ImageNet validation dataset.</b> We evaluate the generalisation of our DISCO to the computer vision domain. The main metrics are mean absolute error (MAE), measured in %p difference in accuracy, and the Spearman rank correlation (Rank) between the true model ranking and the estimated model ranking. Main observations: (1) Same as for language experiments, model signature is an effective strategy for performance estimation. (2) Using PDS on top improves performance even more.
         </h2>
       </div>
-      <div class="item">
+      <div class="result-item">
         <!-- Your image here -->
         <img src="static/images/num-anchors.png" alt="results" style="display: block; margin-left: auto; margin-right: auto;"/>
         <h2 class="subtitle has-text-centered">
-          <b>MMLU performance estimation vs. compression rates.</b> Mean absolute error (MAE), measured in %p difference in accuracy, and the Spearman rank correlation between the true model ranking and the estimated model ranking are shown. At 100 samples, the results are identical to Table \ref{tab:language-main}. Main observations: DISCO hits a better efficiency-precision trade-off across all range of compression rates. For extreme compression rate, kNN is a better choice than random forest (RF).
+          <b>MMLU performance estimation vs. compression rates.</b> Mean absolute error (MAE), measured in %p difference in accuracy, and the Spearman rank correlation between the true model ranking and the estimated model ranking are shown. At 100 samples, the results are identical to the table with the main results. Main observations: DISCO hits a better efficiency-precision trade-off across all range of compression rates. For extreme compression rate, kNN is a better choice than random forest (RF).
         </h2>
       </div>
   </div>
 </div>
 </div>
 </section>
-<!-- End image carousel -->
+<!-- End image section -->
 
 
 <!-- \textbf{MMLU performance estimation vs. compression rates}. Mean absolute error (MAE), measured in \%p difference in accuracy, and the Spearman rank correlation between the true model ranking and the estimated model ranking are shown. At 100 samples, the results are identical to Table \ref{tab:language-main}. \textbf{Main observations}: \method hits a better efficiency-precision trade-off across all range of compression rates. For extreme compression rate, kNN is a better choice than random forest (RF). -->
@@ -358,7 +357,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template.</a>
+            <center>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template.</a></center>
           </p>
 
         </div>

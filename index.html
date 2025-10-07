@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="DISCO: Diversified Sample Condensation for Accelerating Model Evaluation">
   <meta name="twitter:description" content="DISCO: Diversified Sample Condensation for Accelerating Model Evaluation">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/disco2.png">
+  <meta name="twitter:image" content="static/images/1faa9.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="diversified sample condensation; model evaluation; efficient evaluation; anchor points">
@@ -25,7 +25,7 @@
 
 
   <title>DISCO: Diversified Sample Condensation for Accelerating Model Evaluation</title>
-  <link rel="icon" type="image/x-icon" href="static/images/disco2.png">
+  <link rel="icon" type="image/x-icon" href="static/images/1faa9.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">DISCO: Diversified Sample Condensation for Accelerating Model Evaluation</h1>
+            <h1 class="title is-1 publication-title">🪩 DISCO: Diversified Sample Condensation for Accelerating Model Evaluation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -68,7 +68,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Tübingen AI Center, University of Tübingen
+                    <span class="author-block">Tübingen AI Center, University of Tübingen, Parameter Lab
                         <!-- <br>Conferance name and year -->
                     </span>
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
@@ -151,8 +151,8 @@
 <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="static/images/teaser-v2-400.png" alt="Banner image" width="100%">
-        <h2 class="subtitle has-text-centered" style="margin-top: 2em;">
+        <img src="static/images/teaser-v2-400.png" alt="Banner image" width="100%" style="margin-left: -3%;">
+        <h2 class="subtitle has-text-centered" style="margin-top: 2em;;">
             <b>Imbalance:</b> More evaluation budget is spent
             on less informative samples in test sets.
         </h2>
@@ -166,6 +166,17 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+
+        <!-- <div class="content has-text-justified">
+          <p>
+             <center><b>TLDR:</b>Evaluate on MMLU at 1% cost.</center>
+          </p>
+        </div> -->
+        <div class="notification is-light" style="margin-bottom: 2rem;">
+          <p class="has-text-centered">
+            <b>TLDR:</b> Evaluate on MMLU at 1% cost.
+          </p>
+        </div>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -180,6 +191,7 @@
             DISCO reduces evaluation cost by up to 99.3% on MMLU and 99.8% ImageNet with only 1%p error in accuracy estimation,
             demonstrating a superior efficiency-precision trade-off to existing efficient evaluation methods.
              -->
+             <!-- <center><b>TLDR:</b>Evaluate on MMLU at 1% cost.</center> -->
              Evaluating modern machine learning models has become prohibitively expensive. Benchmarks such as LMMs-Eval and HELM demand thousands of GPU hours per model. Costly evaluation reduces inclusivity, slows the cycle of innovation, and worsens environmental impact.
              The typical approach follows two steps. First, select an anchor subset of data. Second, train a mapping from the accuracy on this subset to the final test result. The drawback is that anchor selection depends on clustering, which can be complex and sensitive to design choices. We argue that promoting diversity among samples is not essential; what matters is to select samples that <i>maximise diversity in model responses</i>.
              Our method, <b>Diversifying Sample Condensation (DISCO)</b>, selects the top-k samples with the greatest model disagreements. This uses greedy, sample-wise statistics rather than global clustering. The approach is conceptually simpler. From a theoretical view, inter-model disagreement provides an information-theoretically optimal rule for such greedy selection. <b>DISCO</b> shows empirical gains over prior methods, achieving state-of-the-art results in performance prediction across MMLU, Hellaswag, Winogrande, and ARC.
@@ -200,7 +212,7 @@
         <div id="results-carousel" class="carousel results-carousel" data-pause-on-hover="true">
         <div class="item">
         <!-- Your image here -->
-        <img src="static/images/problem-400.png" alt="problem statement: efficient evaluation"/>
+        <img src="static/images/problem-2.png" alt="problem statement: efficient evaluation"/>
         <h2 class="subtitle has-text-centered">
             <b>Problem overview.</b> We aim at selecting a much smaller evaluation dataset
             than the original evaluation dataset, while keeping the estimated performances
